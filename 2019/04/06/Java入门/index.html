@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="欢迎来到杨余的《Java入门》，这是我在学习java时写的笔记博客。由于有些资料过于繁琐，我只会以网站链接的方式记录下来，请多多包涵。如果你有什么问题，我一概不会回答～但还是欢迎你在下面的评论里发表评论。祝您学习愉快。 Java开头部分package与import的用法Example123456$ import static java.util.Arrays.asList;$ import sta">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-10T15:36:31.930Z">
+<meta property="og:updated_time" content="2019-04-10T15:44:13.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java入门">
 <meta name="twitter:description" content="欢迎来到杨余的《Java入门》，这是我在学习java时写的笔记博客。由于有些资料过于繁琐，我只会以网站链接的方式记录下来，请多多包涵。如果你有什么问题，我一概不会回答～但还是欢迎你在下面的评论里发表评论。祝您学习愉快。 Java开头部分package与import的用法Example123456$ import static java.util.Arrays.asList;$ import sta">
@@ -89,9 +89,9 @@
         <p>欢迎来到杨余的《Java入门》，这是我在学习java时写的笔记博客。由于有些资料过于繁琐，我只会以网站链接的方式记录下来，请多多包涵。<br>如果你有什么问题，我一概不会回答～但还是欢迎你在下面的评论里发表评论。祝您学习愉快。</p>
 <h2 id="Java开头部分"><a href="#Java开头部分" class="headerlink" title="Java开头部分"></a>Java开头部分</h2><h3 id="package与import的用法"><a href="#package与import的用法" class="headerlink" title="package与import的用法"></a>package与import的用法</h3><p>Example<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ import static java.util.Arrays.asList;</span><br><span class="line">$ import static java.util.Collections.emptySet;</span><br><span class="line">$ import static uk.ac.bris.cs.scotlandyard.model.Colour.BLACK;</span><br><span class="line">$ import java.util.ArrayList;</span><br><span class="line">$ import java.util.function.Consumer;</span><br><span class="line">$ import uk.ac.bris.cs.gamekit.graph.Edge;</span><br></pre></td></tr></table></figure></p>
 <p>More info: <a href="https://blog.csdn.net/zhenyusoso/article/details/6174834" target="_blank" rel="noopener">如何理解和使用Java package包</a>—来源书籍《Java编程思想》</p>
-<h3 id="Enum结构用法"><a href="#Enum结构用法" class="headerlink" title="Enum结构用法"></a>Enum结构用法</h3><p>莫名其妙的enum.<strong>values()</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ <span class="keyword">if</span>(!firstDetective.tickets.keySet().containsAll(Arrays.asList(Ticket.values()))) </span><br><span class="line">$ throw new IllegalArgumentException(<span class="string">"Someone has no every tickets"</span>);</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://blog.csdn.net/qq_27093465/article/details/52180865" target="_blank" rel="noopener">Java 枚举(enum) 详解7种常见的用法</a></p>
+<h3 id="Enum结构用法-与-奇妙的list转变"><a href="#Enum结构用法-与-奇妙的list转变" class="headerlink" title="Enum结构用法 与 奇妙的list转变"></a>Enum结构用法 与 奇妙的list转变</h3><p>莫名其妙的enum.<strong>values()</strong> 带出来所有的数组<br><strong>asList</strong>将数组变成list</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">if</span>(!firstDetective.tickets.keySet().containsAll(Arrays.asList(Ticket.values()))) </span><br><span class="line">$ throw new IllegalArgumentException(<span class="string">"Someone has no every tickets"</span>);</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://blog.csdn.net/qq_27093465/article/details/52180865" target="_blank" rel="noopener">Java 枚举(enum) 详解7种常见的用法</a><br>More info:<a href="https://blog.csdn.net/w574951402/article/details/53246777" target="_blank" rel="noopener">Java Arrays.asList()方法详解</a></p>
 <h3 id="Super是什么？泛型？？"><a href="#Super是什么？泛型？？" class="headerlink" title="Super是什么？泛型？？"></a>Super是什么？泛型？？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://itimetraveler.github.io/2016/12/27/%E3%80%90Java%E3%80%91%E6%B3%9B%E5%9E%8B%E4%B8%AD%20extends%20%E5%92%8C%20super%20%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/" target="_blank" rel="noopener">【Java】泛型中 extends 和 super 的区别？</a></p>
 <h3 id="Set-List-Collection"><a href="#Set-List-Collection" class="headerlink" title="Set,List,Collection?"></a>Set,List,Collection?</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
@@ -109,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/06/Java入门/" data-id="cjubdr8jm00001x9jf0zf30ti" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/06/Java入门/" data-id="cjubdwchd0000489jkekngiaz" class="article-share-link">Share</a>
       
       
     </footer>
